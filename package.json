@@ -1,0 +1,53 @@
+{
+  "name": "vue3-multi-slider",
+  "private": false,
+  "version": "0.0.1",
+  "files": ["dist", "src/components/"],
+  "type": "module",
+  "main": "./dist/multi-slider.umd.cjs",
+  "module": "./dist/multi-slider.js",
+  "types": "./dist/multi-slider.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/multi-slider.js",
+      "require": "./dist/multi-slider.umd.cjs"
+    },
+    "./dist/style.css": {
+      "import": "./dist/style.css",
+      "require": "./dist/style.css"
+    }
+  },
+  "peerDependencies": {
+    "vue": "^3.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArcenIce/vue3-multi-slider.git"
+  },
+  "keywords": [
+    "slider",
+    "multi",
+    "multi-slider",
+    "inputs",
+    "vue3",
+    "vue",
+    "vuejs"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc -b && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "path": "^0.12.7",
+    "vite-plugin-dts": "^4.0.2",
+    "vue": "^3.4.35"
+  },
+  "devDependencies": {
+    "@types/node": "^22.2.0",
+    "@vitejs/plugin-vue": "^5.1.2",
+    "typescript": "^5.5.3",
+    "vite": "^5.4.0",
+    "vue-tsc": "^2.0.29"
+  }
+}
