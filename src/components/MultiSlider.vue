@@ -69,7 +69,8 @@ import {
     watch,
     computed,
     onMounted,
-    onUnmounted
+    onUnmounted,
+    defineModel
 } from 'vue';
 
 interface DistributionItem {
@@ -85,7 +86,6 @@ interface Distribution {
 }
 
 const props = defineProps<{
-    distribution: Distribution;
     unit: string;
     min: number;
     max: number;
@@ -98,7 +98,9 @@ const props = defineProps<{
 const emit = defineEmits(['update:modelValue']);
 defineOptions({ inheritAttrs: false });
 
-const distribution = ref<Distribution>({ ...props.distribution });
+const modelDistribution = defineModel<Distribution>({ required: true });
+
+const distribution = ref<Distribution>(modelDistribution.value);
 const slider = ref<HTMLElement | null>(null);
 
 const categories = ref<HTMLElement[]>([]);
@@ -237,7 +239,7 @@ onUnmounted(() => {
 });
 
 watch(
-() => props.distribution,
+distribution,
 (newVal) => {
     distribution.value = { ...newVal };
     updateIndexesFromValue();

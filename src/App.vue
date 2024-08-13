@@ -1,15 +1,19 @@
 <template>
-  <MultiSlider
-    :distribution="model" 
-    v-model="model"
-    :min="0"
-    :max="100"
-    :step="1"
-    unit="€"
-    inputs-width="200px"
-    :show-inputs="true"
-    :ticks="[0, 25, 50, 75, 100]"
-  ></MultiSlider>
+  <div style="width: 50dvw;"> 
+    <MultiSlider
+      v-model="model"
+      :min="0"
+      :max="100"
+      :step="1"
+      unit="%"
+      inputs-width="200px"
+      :show-inputs="true"
+      :ticks="[0, 25, 50, 75, 100]"
+    ></MultiSlider>
+  </div>
+
+  {{ model }}
+
 </template>
 
 <script setup lang="ts">
