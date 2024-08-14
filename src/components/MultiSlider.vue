@@ -46,7 +46,7 @@
             @change="event => updateCategories(category, (event.target as HTMLInputElement)?.value ? Number((event.target as HTMLInputElement).value) : 0)"
             @blur="event => updateCategories(category, (event.target as HTMLInputElement)?.value ? Number((event.target as HTMLInputElement).value) : 0)"
             :color="distribution[category]['background_color']"
-            :style="{ width: props.inputsWidth }"
+            :style="{ width: props.inputsWidth || '200px' }"
             >
             <label for="input" class="label">{{ category }}</label>
             <div class="underline" :style="{ 'background-color': distribution[category]['background_color']}"></div>
@@ -99,7 +99,6 @@ const emit = defineEmits(['update:modelValue']);
 defineOptions({ inheritAttrs: false });
 
 const modelDistribution = defineModel<Distribution>({ required: true });
-
 const distribution = ref<Distribution>(modelDistribution.value);
 const slider = ref<HTMLElement | null>(null);
 

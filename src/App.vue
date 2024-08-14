@@ -11,9 +11,6 @@
       :ticks="[0, 25, 50, 75, 100]"
     ></MultiSlider>
   </div>
-
-  {{ model }}
-
 </template>
 
 <script setup lang="ts">
