@@ -71,44 +71,44 @@ const distribution = reactive({
 ## Props
 
 ##### min
-type: number
-description: minimum index value for all sliders
+type: number  
+description: minimum index value for all sliders  
 default: 0
 
 ##### max
-type: number
-description: maximum index value for all sliders
+type: number  
+description: maximum index value for all sliders  
 default: 100
 
 ##### step
-type: number
-description: values step
+type: number  
+description: values step  
 default: 0.01
 
 ##### unit
-type: string
-description: the unit displayed in inputs and slider values, it can be anything
+type: string  
+description: the unit displayed in inputs and slider values, it can be anything  
 default: %
 
 ##### inputs-width
-type: string
-format: css width (px or % or ...)
-default: 200px
+type: string  
+format: css width (px or % or ...)  
+default: 200px  
 description: width for the inputs underneath the slider
 
 ##### show-inputs
-type: boolean
-default: true
+type: boolean  
+default: true  
 description: hide or not the inputs underneath the slider
 
 ##### ticks
-type: array
-default: [min, (min + middle) / 2, middle, (middle + max) / 2, max]
+type: array  
+default: [min, (min + middle) / 2, middle, (middle + max) / 2, max]  
 description: the ticks to be displayed under the slider
 
 ## Model
 
-To pass categories to the slider, you must define a v-model this way:
+To pass categories to the slider, you must define a v-model this way:  
 value must be reactive in order to catch updates from the component
 
 ```javascript
