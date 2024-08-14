@@ -10,8 +10,8 @@ You can use it to make distributions of percentages or other units (passed in pr
 Colors, range, categories and display are customizable
 ## Demo
 
-![demo_1](https://raw.githubusercontent.com/ArcenIce/vue3-multi-slider/dev/docs/gifs/demo_1.gif)
-![demo_2](https://raw.githubusercontent.com/ArcenIce/vue3-multi-slider/dev/docs/gifs/demo_2.gif)
+![demo_1](https://raw.githubusercontent.com/ArcenIce/vue3-multi-slider/main/docs/gifs/demo_1.gif)
+![demo_2](https://raw.githubusercontent.com/ArcenIce/vue3-multi-slider/main/docs/gifs/demo_2.gif)
 
 
 ## Installation
