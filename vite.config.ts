@@ -3,10 +3,11 @@ import vue from '@vitejs/plugin-vue'
 
 import * as path from "path";
 import dts from "vite-plugin-dts";
+import cssInjectedByJsPlugin from 'vite-plugin-css-injected-by-js'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue(), dts({ rollupTypes: true })],
+  plugins: [vue(), dts(), cssInjectedByJsPlugin()],
   build: {
     lib: {
       entry: path.resolve(__dirname, "src/index.ts"),

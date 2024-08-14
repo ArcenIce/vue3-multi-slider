@@ -1,8 +1,11 @@
 {
   "name": "vue3-multi-slider",
   "private": false,
-  "version": "0.0.1",
-  "files": ["dist", "src/components/"],
+  "version": "0.0.2",
+  "files": [
+    "dist",
+    "src/components/"
+  ],
   "type": "module",
   "main": "./dist/multi-slider.umd.cjs",
   "module": "./dist/multi-slider.js",
@@ -40,8 +43,9 @@
   },
   "dependencies": {
     "path": "^0.12.7",
+    "vite-plugin-css-injected-by-js": "^3.5.1",
     "vite-plugin-dts": "^4.0.2",
-    "vue": "^3.4.35"
+    "vue": "^3.0.0"
   },
   "devDependencies": {
     "@types/node": "^22.2.0",
